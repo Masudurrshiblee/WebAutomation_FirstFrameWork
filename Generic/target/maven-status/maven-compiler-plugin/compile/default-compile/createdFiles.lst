@@ -1,0 +1,10 @@
+utilities\WriteExcel.class
+reporting\ExtentManager.class
+reporting\ExtentTestManager.class
+utilities\DataReader$1.class
+reporting\ApplicationLog.class
+utilities\ReadExcel.class
+reporting\TestLogger.class
+common\WebAPI.class
+databases\ConnectToSqlDB.class
+utilities\DataReader.class

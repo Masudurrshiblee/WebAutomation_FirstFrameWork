@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 3, Time elapsed: 1.265 s <<< FAILURE! - in TestSuite
+homepagetest.HomePageTest.setUp[true, browserStack, windows, 10, Chrome, 95.0, https://www.amazon.com](0)  Time elapsed: 1.165 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Invalid username or password (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 536 milliseconds
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-SN8KLM3', ip: '192.168.1.166', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
+Driver info: driver.version: RemoteWebDriver
+
+homepagetest.HomePageTest.cleanUp  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.quit()" because "common.WebAPI.driver" is null
+

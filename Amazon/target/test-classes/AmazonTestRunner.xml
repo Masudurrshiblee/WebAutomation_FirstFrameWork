@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="AmazonTestSuit">
+    <parameter name="useCloudEnv" value="true"/>
+    <parameter name="cloudEnvName" value="browserStack"/>
+    <parameter name="OS" value="windows"/>
+    <parameter name="OS_version" value="10"/>
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="browserVersion" value="95.0"/>
+    <parameter name="url" value="https://www.amazon.com"/>
+
+
+<test name="Amazon Automation Test Script">
+    
+    <classes>
+<!--        Calling test classes-->
+        <class name="homepagetest.HomePageTest">
+
+<!--  If we want to execute any specific method  then we have to use following approach-->
+<!-- That means we have to create method tag and then inside the tag we have to create exclude or include tag-->
+            <methods>
+<!--               <exclude name="testSearchBox"></exclude>-->
+<!--                <include name="testLogIn"></include>-->
+            </methods>
+
+        </class>
+
+<!--        Same way you can add more classes and execute them-->
+    </classes>
+    
+    
+</test>
+    
+</suite>
