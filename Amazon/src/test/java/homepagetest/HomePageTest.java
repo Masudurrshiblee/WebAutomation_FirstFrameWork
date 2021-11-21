@@ -3,6 +3,7 @@ package homepagetest;
 import common.WebAPI;
 import homepage.HomePage;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
@@ -27,6 +28,11 @@ public class HomePageTest extends WebAPI {    // Test class method
 public void testSearchBox(){
         //Calling action method by reference variable
         homepage.searchBox();
+
+        //Verify expected vs Actual
+    String expectedText="\"mask\"";
+    String actualText=homepage.searchText.getText();
+    Assert.assertEquals(actualText,expectedText,"product does not found");
 
 }
 

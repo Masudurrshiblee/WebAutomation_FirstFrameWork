@@ -18,15 +18,15 @@ public class HomePage extends WebAPI {
     //@Find annotation: First approach
 
     @FindBy(how= How.ID, using=searchBoxLocator) public WebElement searchBox; // Here import Homepage WebElement class
-    @FindBy(how=How.ID, using=searchButtonLocator) public WebElement searButton;
-
+    @FindBy(how=How.ID, using=searchButtonLocator) public WebElement searchButton;
+    @FindBy(how=How.XPATH, using=searchTextLocator) public WebElement searchText;
 
     // Action method
     public void searchBox(){
         //Entering value in search Box
         searchBox.sendKeys(productName); //searchBox.sendKeys("mask");
         // Clicking the searchButton
-        searButton.click();
+        searchButton.click();
     }
 
 

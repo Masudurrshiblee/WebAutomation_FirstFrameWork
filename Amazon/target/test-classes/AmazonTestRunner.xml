@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="AmazonTestSuit">
-    <parameter name="useCloudEnv" value="true"/>
+<suite name="AmazonTestSuit" parallel="tests" thread-count="2">
+<!--    If we put parallel value  equals none then test case will not run parallel-->
+    <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserStack"/>
     <parameter name="OS" value="windows"/>
     <parameter name="OS_version" value="10"/>
@@ -11,8 +12,9 @@
     <parameter name="url" value="https://www.amazon.com"/>
 
 
-<test name="Amazon Automation Test Script">
-    
+<test name="Amazon Automation Test Script using chrome">
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="browserVersion" value="95.0"/>
     <classes>
 <!--        Calling test classes-->
         <class name="homepagetest.HomePageTest">
@@ -28,8 +30,29 @@
 
 <!--        Same way you can add more classes and execute them-->
     </classes>
-    
+<!--    If we want to run test cases in multiple browser then we have to make test tag for every single browser-->
     
 </test>
+    <test name="Amazon Automation Test Script using FireFox">
+        <parameter name="browserName" value="firefox"/>
+        <parameter name="browserVersion" value="94.0"/>
+        <classes>
+            <!--        Calling test classes-->
+            <class name="homepagetest.HomePageTest">
+
+                <!--  If we want to execute any specific method  then we have to use following approach-->
+                <!-- That means we have to create method tag and then inside the tag we have to create exclude or include tag-->
+                <methods>
+                    <!--               <exclude name="testSearchBox"></exclude>-->
+                    <!--                <include name="testLogIn"></include>-->
+                </methods>
+
+            </class>
+
+            <!--        Same way you can add more classes and execute them-->
+        </classes>
+
+
+    </test>
     
 </suite>

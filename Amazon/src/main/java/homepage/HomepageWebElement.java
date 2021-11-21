@@ -7,5 +7,5 @@ public class HomepageWebElement {
     public static final String searchBoxLocator = "twotabsearchtextbox";
     public static final String productName = "mask";
     public static final String searchButtonLocator = "nav-search-submit-button";
-
+    public static final String searchTextLocator = " public static final String searchButtonLocator = \"nav-search-submit-button\"";
 }
